@@ -1,0 +1,544 @@
+<!Doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <titel> Katholische Heilige </titel>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            color:red;
+        }
+        h2 {
+            color:red;
+        }
+        body {
+            background-color:rgb(56, 62, 68)
+        }
+        p {
+            color:white;
+        }
+        titel {
+            color:white;
+        }
+        button 
+        {
+            color:white;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius:8px;
+            backdrop-filter:blur (8px);
+            padding: 8px 8px;
+        
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: rgba(0,0,0,0.3);padding: 15px; display: flex; algin-items: center; justify-content: space-between;">
+        <img src="logo.jpeg" style="height: 50px;">
+        <h1 data-translate="h" style="margin: 0; color:white;">Katholische Heilige</h1>
+    </header>
+    <img src="https://media.istockphoto.com/id/463080813/de/foto/das-letzte-abendmahl.jpg?s=612x612&w=0&k=20&c=wufwCG7NjiF2AKCttoik-q0Nfbvh3epxfKuM1Qy2X6g=" width="100%">
+    
+<div id="calendarGrid"></div>
+
+<!-- ROHDATEN-BEREICH: Hier kannst du deine Heiligen eintragen -->
+<div id="rohdatenListe" style="display: none;">
+    <h2>Januar</h2>
+<p> 1.Januar: Hochfest der Gottes Mutter Maria </p>
+<p>2.Januar: Basilius der Große und Gregor von Nazianz</p>
+<p>6.Januar: Erscheinung des Hern (Heilige drei Könige)</p>
+<p>7.Januar: Valentin, Bischof von Rätien </p>
+<p>8.Januar: Severin, Mönch in Norikum </p>
+<p>13.Januar:Hilarius, Bischof von Poitiers</p>
+<p>17.Januar:Antonius,Möchsvater in Ägypten 
+</p>
+<p>20.Januar:Sebastian;Fabian,Papst 
+</p>
+<p>21.Januar: Agnes</p>
+<p>22.Januar: Vinzenz, Diakon und Märtyrer in Spanien</p>
+<p>24.Januar: Franz von Sales</p>
+<p>28.Januar: Thomas von Aquin </p>
+<p>31.Januar: Johannes Bosco</p>
+<p></p>
+<h2>Februar</h2>
+<p>2.Februar: Darstellung des Herrn (Hochfest)</p>
+<p>3.Februar: Blasius</p>
+<p>4.Februa: Rabanus Maurus, Bischof von Mainz</p>
+<p>5.Februar: Agatha, Märtyrerin in Catania</p>
+<p>6.Februar: Paul Miki und Gefährten</p>
+<p>8.Februar: Hieronymus Ämiliani</p>
+<p>10.Februar: Scholastika, Jungfrau</p>
+<p>11.Februar: Gedenktag unsere Lieben Frau von Lourdes</p>
+<p>14.Februar:Cyrill</p>
+<p>17.Februar: Sieben Gründer des Servitenordens</p>
+<p>21.Febraur: Petrus Damiani</p>
+<p>22.Febraur: Kathedra Petri</p>
+<p>23.Febraur: Polykarp</p>
+<p>24.Febraur: Matthias, Apostel</p>
+<p>25.Febraur: Walburga, Äbtissin von Heidenheim ind Franken</p>
+<h2>März</h2>
+<p>4.März: Kasimir, Königsohn </p>
+<p>6.März: Fridolin von Säckingen, Mönch und Glaubensbote</p>
+<p>7.März: Perpetua und Felizitas, Märtyrerinnen in Karthago </p>
+<p>8.März: Johannes von Gott, Oredngründer</p>
+<p>9.März: Franziska, Witwe und Oredensgründerin in Rom</p>
+<p>14.März: Mathilde</p>
+<p>15.März: Klemens</p>
+<p>17.März: Getrud, Äbtissin von Nivelles</p>
+<p>18.März:Cyrill, Bischof von Jerusalem</p>
+<p>19.März: Josef, Bräutigam der Gottes Mutter Maria</p>
+<p>21.März: Benedikt von Nursia</p>
+<p>23.März: Turibio von Mogrovejo</p>
+<p>25.März: Verkündigung des Herrn </p>
+<p>26.März: Liudger, Bischof von Münster</p>
+<h2>April</h2>
+<p>2.April: Franz von Paola</p>
+<p>4.April: Isidor, Bischof von Sevilla</p>
+<p>5.April: Vinzenz Ferrer, Oredensgründer</p>
+<p>7.April: Johannes Baptist de la Salle,Priester</p>
+<p> 11.April: Stanislaus, Bischof von Krakau</p>
+<p>13.April: Martin I., Papst, Märtyrer</p>
+<p>19.April: Leo I,Papst</p>
+<p>21.April: Bruder Konrad</p>
+<p>23.April: Adalbert, Bischof von Prag</p>
+<p>24.April: Fidelis von Sigmaringen, Ordenspriester</p>
+<p>25.April Markus, Evangelist</p>
+<p>27.April: Petrus von Kanisius, Ordenspriester</p>
+<p>28.April: Peter Chanel, Preister und Märtyrer in Ozeanien </p>
+<p>29.April: Katharina von Siena</p>
+<p>30.April: Pius V.,Papst</p>
+<h2>Mai</h2>
+<p>1.Mai: Joef der Arbeiter</p>
+<p>2.Mai: Athanasius, Bischof von Alexandrein</p>
+<p>3.Mai: Philippus und Jakobus, Apostel </p>
+<p>4.Mai: Florian und Lorch</p>
+<p>5.Mai: Godehard, Bischof von Heidenheim</p>
+<p>12.Mai: Nereus von Achilleus, Märtyrer</p>
+<p>16.Mai: Johannes Nepomuk, Priester</p>
+<p>18.Mai: Johannes I.,Papst</p>
+<p>20.Mai: Bernhardin von Siena, Ordenspriester</p>
+<p>21.Mai: Herrman Josef, Ordenspriester</p>
+<p>22.Mai: Rita von Cascia</p>
+<p>25.Mai: Gregor VII., Papst</p>
+<p>26.Mai: Philipp Neri, Priester</p>
+<p>27.Mai: Augustinus, Bischof von Canterbury</p>
+<h2>Juni</h2>
+<p>1.Juni:Justin, Philosoph</p>
+<p>2.Juni: Marcellinus und Petrus, Märtyrer in Rom </p>
+<p>3.Juni: Karl Lwanga, Märtyrer in Uganda</p>
+<p>5.Juni: Bonifatius, Bischof</p>
+<p>6.Juni: Norbert von Xanten</p>
+<p>9.Juni: Ephräm der Syrer, Diakon</p>
+<p>11.Juni: Barnabas, Apostel</p>
+<p>13.Juni: Antonius von Padua</p>
+<p>15.Juni: Vitus, Märtyrer in Sizilien</p>
+<p>16.Juni: Benno, Bischof von Meißen</p>
+<p>19.Juni: Romuald, Abt</p>
+<p>21.Juni: Aloisius Gonzaga, Oredensmann</p>
+<p>22.Juni: Paulinus, Bischof von Nola</p>
+<p>24.Juni: Geburt Johannes des Teufers</p>
+<p>27.Juni: Hemma von Gurk</p>
+<p>28.Juni: Irenäus, Bischof von Lyon und Märtyrer</p>
+<p>29.Juni: Petrus und Paulus, Apostel</p>
+<p>30.Juni: Otto, Bischof von Bamberg und Glaubensbote</p>
+<h2>Juli</h2>
+<p>2.Juli: Mariä Heimsuchung</p>
+<p>3.Juli: Thomas, Apostel</p>
+<p>4.Juli: Ulrich Bischof von Augsburg</p>
+<p>6.Juli: Maria Goretti, Jungfrau, Märtyrerein</p>
+<p>7.Juli: Willibald, Bischof von Eichstätt</p>
+<p>8.Juli: Kilian, Bischof von Würzberg</p>
+<p>10.Juli: Knud, König von Dänemark</p>
+<p>11.Juli: Benedikt von Nursia, Schutzpatron Europas</p>
+<p>13.Juli: Heinrich II. und Kunigunde, Kaiserpaar</p>
+<p>15.Juli: Bonaventura</p>
+<p>20.Juli: Margareta, Jungfrau </p>
+<p>21.Juli: Laurentius von Lellis, Preister und Oredensgründer</p>
+<p>22.Juli: Maria Magdalena</p>
+<p>23.Juli: Brigitta von Schweden, Oredensgründerin</p>
+<p>24.Juli: Christopherus, Märtyrer in Kleinasien </p>
+<p>25.Juli: Jakobus, Apostel</p>
+<p>26.Juli: Joachim und Anna, Eltern der Gottesmutter Maria </p>
+<p>29.Juli: Marta von Betanien</p>
+<p>31.Juli: Ignatius von Loyola</p>
+<h2>August</h2>
+<p>1.August: Alfons Maria von Liguori, Ordensgründer</p>
+<p>4.August: Pfarrer von Ars </p>
+<p>6.August: Verklärung des Herrn </p>
+<p>7.August: Xystus II.,Papst</p>
+<p>8.August: Dominikus, Prister und Orednsgründer</p>
+<p>10.August: Laurentius, Diakon</p>
+<p>11.August: Klara von Assisi, Jungfrau und Oredensgründerin</p>
+<p>14.August: Maximilian Maria Kolbe, Ordenspriester</p>
+<p>15.August: Mariä Aufnahme in den Himmel</p>
+<p>16.August: Stephan, König von Ungarn</p>
+<p>19.August: Johannes Eudes, Priester und Ordensgründer</p>
+<p>21.August: Pius X., Papst</p>
+<p>22.August: Maria Königin</p>
+<p>24.August: Bartholomäus</p>
+<p>27.August: Monika, Mutter des Hl.Augustinus</p>
+<p>28.August: Augustinus</p>
+<h2>September</h2>
+<p>3.September: Gregor der Große, Papst und Kirchenlehrer</p>
+<p>5.September: Mutter Teresa</p>
+<p>8.September: Mariä Geburt</p>
+<p>13.September: Johannes von Cyrysostomus</p>
+<p>14.September: Kreuzerhöhung</p>
+<p>16.September: Kornelius, Papst</p>
+<p>17.September: Hildegard von Bingen</p>
+<p>18.September: Lambert, Bischof von Maastricht</p>
+<p>19.September: Januarius, Bichof von Neapel, Märtyrer</p>
+<p>20.September: Andreas Kim Taegon, Priester</p>
+<p>21.September: Matthäus, Apostel, Evangelist</p>
+<p>23.September: Pater Pio</p>
+<p>24.September: Rupert von Virgil</p>
+<p>27.September: Vinzenz von Paul, Priester</p>
+<p>28.September: Lioba, Äbtissin von Tauberbischofsheim</p>
+<p>29.September: Michael, Gabriel und Rafael (Erzengel)</p>
+<p>30.September: Hieronymus, Priester </p>
+<h2>Oktober</h2>
+<p>1.Oktober: Theresia von Kinde Jesu, Ordensfrau</p>
+<p>4.Oktober: Franz von Assisi</p>
+<p>5.Oktober: Anna Schäffe und Fautina Kowalska </p>
+<p>6.Oktober: Bruno, Möch, Einsiedler, Ordensgründer</p>
+<p>7.Oktober: Unsere liebe Frau vom Rosenkranz</p>
+<p>9.Oktober: Dionysius, Bischof von Paris und Johannes Leonardi, Priester</p>
+<p>12.Oktober: Carlo Acutis</p>
+<p>14.Oktober: Kallistus I.,Papst</p>
+<p>15.Oktober: Theresia von Jesus, Ordenfrau</p>
+<p>16.Oktober: Hedwig von Andechs, Herzogin von Schlesien</p>
+<p>17.Oktober: Ignatius, Bischof von Antiochien</p>
+<p>18.Oktober: Lukas, Evangelist</p>
+<p>21.Oktober: Ursula und Gefährtinnen, Märtyrerin in Köln</p>
+<p>22.Oktober: Joahnnes Paul II., Papst</p>
+<p>23.Oktober: Johannes von Capestrano, Ordenspriester</p>
+<p>24.Oktober: Antonius Maria Claret, Bichof von Santiago in Kuba</p>
+<p>28.Oktober: Simon und Judas, Apostel</p>
+<p>31.Oktober: Wolfgang, Bichof von Regensburg</p>
+<h2>November</h2>
+<p>1.November: Allerheiligen</p>
+<p>2.November: Allerseelen</p>
+<p>3.November: Hubert, Bichof von Lüttich</p>
+<p>4.November: Karl Borromäus, Bischof von Mailand</p>
+<p>6.November: Leonhard, Einsiedler von Limoges</p>
+<p>9.November: Weihetga der Lateransbasilika</p>
+<p>10.November: Leo der Große, Papst</p>
+<p>11.November: Martin, Bischof von Tours</p>
+<p>12.November: Josaphat, Bischof von Polozk in Weißrussland</p>
+<p>15.November: Albert der Goße, Ordensmann, Bischof von Regensburg</p>
+<p>16.November: Margareta, Königin von Schottland</p>
+<p>17.November: Gertrud von Helfta, Ordensfrau</p>
+<p>18.November: Weihetag der Basilika st.Peter und Paul in Rom</p>
+<p>19.November: Elisabeth, Landgräfin von Thüringen</p>
+<p>21.November: Unsere Liebe Frau in Jerusalem</p>
+<p>22.November: Cäcilia, Jungfrau, Märtyrerin in Rom</p>
+<p>23.November: Kolumban, Abt von Luxeuil und Babbio</p>
+<p>25.November: Katherina von Alexandrien</p>
+<p>26.November: Konrad von Gebhard, Bischof von Konstanz</p>
+<p>30.November: Andreas, Apostel</p>
+<h2>Dezember</h2>
+<p>2.Dezember: Luzius, Bischof von Chur</p>
+<p>3.Dezember: Franz Xaver, Ordenspriester</p>
+<p>4.Dezember: Barbara, Märtyrerein in Nikomedien</p>
+<p>6.Dezemeber: Nikolaus, Bischof von Mayra</p>
+<p>7.Dezember: Ambrosius, Bichof von Mailand</p>
+<p>11.Dezember: Damasus I.Papst</p>
+<p>13.Dezember: Lucia, Jungfrau, Märtyrerin in Syrakus</p>
+<p>14.Dezember: Johannes von Kreuz, Ordenspriester</p>
+<p>23.Dezember: Johannes von Krakau, Priester</p>
+<p>25.Dezmeber: Weihnachten (Hochfest)</p>
+<p>26.Dezember: Stephanus</p>
+<p>27.Dezember: Johannes, Apostel und evangelist</p>
+<p>29.Dezember: Thomas Becket, Bichof von Canterbury</p>
+<p>31.Dezember: Silvester, 1Papst</p>
+</div>
+
+<h1> Katholsicher HeiligenKalender</h1>
+
+<h2>Januar</h2>
+<p> 1.Januar: Hochfest der Gottes Mutter Maria </p>
+<p>2.Januar: Basilius der Große und Gregor von Nazianz</p>
+<p>6.Januar: Erscheinung des Hern (Heilige drei Könige)</p>
+<p>7.Januar: Valentin, Bischof von Rätien </p>
+<p>8.Januar: Severin, Mönch in Norikum </p>
+<p>13.Januar:Hilarius, Bischof von Poitiers</p>
+<p>17.Januar:Antonius,Möchsvater in Ägypten 
+</p>
+<p>20.Januar:Sebastian;Fabian,Papst 
+</p>
+<p>21.Januar: Agnes</p>
+<p>22.Januar: Vinzenz, Diakon und Märtyrer in Spanien</p>
+<p>24.Januar: Franz von Sales</p>
+<p>28.Januar: Thomas von Aquin </p>
+<p>31.Januar: Johannes Bosco</p>
+<p></p>
+<h2>Februar</h2>
+<p>2.Februar: Darstellung des Herrn (Hochfest)</p>
+<p>3.Februar: Blasius</p>
+<p>4.Februa: Rabanus Maurus, Bischof von Mainz</p>
+<p>5.Februar: Agatha, Märtyrerin in Catania</p>
+<p>6.Februar: Paul Miki und Gefährten</p>
+<p>8.Februar: Hieronymus Ämiliani</p>
+<p>10.Februar: Scholastika, Jungfrau</p>
+<p>11.Februar: Gedenktag unsere Lieben Frau von Lourdes</p>
+<p>14.Februar:Cyrill</p>
+<p>17.Februar: Sieben Gründer des Servitenordens</p>
+<p>21.Febraur: Petrus Damiani</p>
+<p>22.Febraur: Kathedra Petri</p>
+<p>23.Febraur: Polykarp</p>
+<p>24.Febraur: Matthias, Apostel</p>
+<p>25.Febraur: Walburga, Äbtissin von Heidenheim ind Franken</p>
+<h2>März</h2>
+<p>4.März: Kasimir, Königsohn </p>
+<p>6.März: Fridolin von Säckingen, Mönch und Glaubensbote</p>
+<p>7.März: Perpetua und Felizitas, Märtyrerinnen in Karthago </p>
+<p>8.März: Johannes von Gott, Oredngründer</p>
+<p>9.März: Franziska, Witwe und Oredensgründerin in Rom</p>
+<p>14.März: Mathilde</p>
+<p>15.März: Klemens</p>
+<p>17.März: Getrud, Äbtissin von Nivelles</p>
+<p>18.März:Cyrill, Bischof von Jerusalem</p>
+<p>19.März: Josef, Bräutigam der Gottes Mutter Maria</p>
+<p>21.März: Benedikt von Nursia</p>
+<p>23.März: Turibio von Mogrovejo</p>
+<p>25.März: Verkündigung des Herrn </p>
+<p>26.März: Liudger, Bischof von Münster</p>
+<h2>April</h2>
+<p>2.April: Franz von Paola</p>
+<p>4.April: Isidor, Bischof von Sevilla</p>
+<p>5.April: Vinzenz Ferrer, Oredensgründer</p>
+<p>7.April: Johannes Baptist de la Salle,Priester</p>
+<p> 11.April: Stanislaus, Bischof von Krakau</p>
+<p>13.April: Martin I., Papst, Märtyrer</p>
+<p>19.April: Leo I,Papst</p>
+<p>21.April: Bruder Konrad</p>
+<p>23.April: Adalbert, Bischof von Prag</p>
+<p>24.April: Fidelis von Sigmaringen, Ordenspriester</p>
+<p>25.April Markus, Evangelist</p>
+<p>27.April: Petrus von Kanisius, Ordenspriester</p>
+<p>28.April: Peter Chanel, Preister und Märtyrer in Ozeanien </p>
+<p>29.April: Katharina von Siena</p>
+<p>30.April: Pius V.,Papst</p>
+<h2>Mai</h2>
+<p>1.Mai: Joef der Arbeiter</p>
+<p>2.Mai: Athanasius, Bischof von Alexandrein</p>
+<p>3.Mai: Philippus und Jakobus, Apostel </p>
+<p>4.Mai: Florian und Lorch</p>
+<p>5.Mai: Godehard, Bischof von Heidenheim</p>
+<p>12.Mai: Nereus von Achilleus, Märtyrer</p>
+<p>16.Mai: Johannes Nepomuk, Priester</p>
+<p>18.Mai: Johannes I.,Papst</p>
+<p>20.Mai: Bernhardin von Siena, Ordenspriester</p>
+<p>21.Mai: Herrman Josef, Ordenspriester</p>
+<p>22.Mai: Rita von Cascia</p>
+<p>25.Mai: Gregor VII., Papst</p>
+<p>26.Mai: Philipp Neri, Priester</p>
+<p>27.Mai: Augustinus, Bischof von Canterbury</p>
+<h2>Juni</h2>
+<p>1.Juni:Justin, Philosoph</p>
+<p>2.Juni: Marcellinus und Petrus, Märtyrer in Rom </p>
+<p>3.Juni: Karl Lwanga, Märtyrer in Uganda</p>
+<p>5.Juni: Bonifatius, Bischof</p>
+<p>6.Juni: Norbert von Xanten</p>
+<p>9.Juni: Ephräm der Syrer, Diakon</p>
+<p>11.Juni: Barnabas, Apostel</p>
+<p>13.Juni: Antonius von Padua</p>
+<p>15.Juni: Vitus, Märtyrer in Sizilien</p>
+<p>16.Juni: Benno, Bischof von Meißen</p>
+<p>19.Juni: Romuald, Abt</p>
+<p>21.Juni: Aloisius Gonzaga, Oredensmann</p>
+<p>22.Juni: Paulinus, Bischof von Nola</p>
+<p>24.Juni: Geburt Johannes des Teufers</p>
+<p>27.Juni: Hemma von Gurk</p>
+<p>28.Juni: Irenäus, Bischof von Lyon und Märtyrer</p>
+<p>29.Juni: Petrus und Paulus, Apostel</p>
+<p>30.Juni: Otto, Bischof von Bamberg und Glaubensbote</p>
+<h2>Juli</h2>
+<p>2.Juli: Mariä Heimsuchung</p>
+<p>3.Juli: Thomas, Apostel</p>
+<p>4.Juli: Ulrich Bischof von Augsburg</p>
+<p>6.Juli: Maria Goretti, Jungfrau, Märtyrerein</p>
+<p>7.Juli: Willibald, Bischof von Eichstätt</p>
+<p>8.Juli: Kilian, Bischof von Würzberg</p>
+<p>10.Juli: Knud, König von Dänemark</p>
+<p>11.Juli: Benedikt von Nursia, Schutzpatron Europas</p>
+<p>13.Juli: Heinrich II. und Kunigunde, Kaiserpaar</p>
+<p>15.Juli: Bonaventura</p>
+<p>20.Juli: Margareta, Jungfrau </p>
+<p>21.Juli: Laurentius von Lellis, Preister und Oredensgründer</p>
+<p>22.Juli: Maria Magdalena</p>
+<p>23.Juli: Brigitta von Schweden, Oredensgründerin</p>
+<p>24.Juli: Christopherus, Märtyrer in Kleinasien </p>
+<p>25.Juli: Jakobus, Apostel</p>
+<p>26.Juli: Joachim und Anna, Eltern der Gottesmutter Maria </p>
+<p>29.Juli: Marta von Betanien</p>
+<p>31.Juli: Ignatius von Loyola</p>
+<h2>August</h2>
+<p>1.August: Alfons Maria von Liguori, Ordensgründer</p>
+<p>4.August: Pfarrer von Ars </p>
+<p>6.August: Verklärung des Herrn </p>
+<p>7.August: Xystus II.,Papst</p>
+<p>8.August: Dominikus, Prister und Orednsgründer</p>
+<p>10.August: Laurentius, Diakon</p>
+<p>11.August: Klara von Assisi, Jungfrau und Oredensgründerin</p>
+<p>14.August: Maximilian Maria Kolbe, Ordenspriester</p>
+<p>15.August: Mariä Aufnahme in den Himmel</p>
+<p>16.August: Stephan, König von Ungarn</p>
+<p>19.August: Johannes Eudes, Priester und Ordensgründer</p>
+<p>21.August: Pius X., Papst</p>
+<p>22.August: Maria Königin</p>
+<p>24.August: Bartholomäus</p>
+<p>27.August: Monika, Mutter des Hl.Augustinus</p>
+<p>28.August: Augustinus</p>
+<h2>September</h2>
+<p>3.September: Gregor der Große, Papst und Kirchenlehrer</p>
+<p>5.September: Mutter Teresa</p>
+<p>8.September: Mariä Geburt</p>
+<p>13.September: Johannes von Cyrysostomus</p>
+<p>14.September: Kreuzerhöhung</p>
+<p>16.September: Kornelius, Papst</p>
+<p>17.September: Hildegard von Bingen</p>
+<p>18.September: Lambert, Bischof von Maastricht</p>
+<p>19.September: Januarius, Bichof von Neapel, Märtyrer</p>
+<p>20.September: Andreas Kim Taegon, Priester</p>
+<p>21.September: Matthäus, Apostel, Evangelist</p>
+<p>23.September: Pater Pio</p>
+<p>24.September: Rupert von Virgil</p>
+<p>27.September: Vinzenz von Paul, Priester</p>
+<p>28.September: Lioba, Äbtissin von Tauberbischofsheim</p>
+<p>29.September: Michael, Gabriel und Rafael (Erzengel)</p>
+<p>30.September: Hieronymus, Priester </p>
+<h2>Oktober</h2>
+<p>1.Oktober: Theresia von Kinde Jesu, Ordensfrau</p>
+<p>4.Oktober: Franz von Assisi</p>
+<p>5.Oktober: Anna Schäffe und Fautina Kowalska </p>
+<p>6.Oktober: Bruno, Möch, Einsiedler, Ordensgründer</p>
+<p>7.Oktober: Unsere liebe Frau vom Rosenkranz</p>
+<p>9.Oktober: Dionysius, Bischof von Paris und Johannes Leonardi, Priester</p>
+<p>12.Oktober: Carlo Acutis</p>
+<p>14.Oktober: Kallistus I.,Papst</p>
+<p>15.Oktober: Theresia von Jesus, Ordenfrau</p>
+<p>16.Oktober: Hedwig von Andechs, Herzogin von Schlesien</p>
+<p>17.Oktober: Ignatius, Bischof von Antiochien</p>
+<p>18.Oktober: Lukas, Evangelist</p>
+<p>21.Oktober: Ursula und Gefährtinnen, Märtyrerin in Köln</p>
+<p>22.Oktober: Joahnnes Paul II., Papst</p>
+<p>23.Oktober: Johannes von Capestrano, Ordenspriester</p>
+<p>24.Oktober: Antonius Maria Claret, Bichof von Santiago in Kuba</p>
+<p>28.Oktober: Simon und Judas, Apostel</p>
+<p>31.Oktober: Wolfgang, Bichof von Regensburg</p>
+<h2>November</h2>
+<p>1.November: Allerheiligen</p>
+<p>2.November: Allerseelen</p>
+<p>3.November: Hubert, Bichof von Lüttich</p>
+<p>4.November: Karl Borromäus, Bischof von Mailand</p>
+<p>6.November: Leonhard, Einsiedler von Limoges</p>
+<p>9.November: Weihetga der Lateransbasilika</p>
+<p>10.November: Leo der Große, Papst</p>
+<p>11.November: Martin, Bischof von Tours</p>
+<p>12.November: Josaphat, Bischof von Polozk in Weißrussland</p>
+<p>15.November: Albert der Goße, Ordensmann, Bischof von Regensburg</p>
+<p>16.November: Margareta, Königin von Schottland</p>
+<p>17.November: Gertrud von Helfta, Ordensfrau</p>
+<p>18.November: Weihetag der Basilika st.Peter und Paul in Rom</p>
+<p>19.November: Elisabeth, Landgräfin von Thüringen</p>
+<p>21.November: Unsere Liebe Frau in Jerusalem</p>
+<p>22.November: Cäcilia, Jungfrau, Märtyrerin in Rom</p>
+<p>23.November: Kolumban, Abt von Luxeuil und Babbio</p>
+<p>25.November: Katherina von Alexandrien</p>
+<p>26.November: Konrad von Gebhard, Bischof von Konstanz</p>
+<p>30.November: Andreas, Apostel</p>
+<h2>Dezember</h2>
+<p>2.Dezember: Luzius, Bischof von Chur</p>
+<p>3.Dezember: Franz Xaver, Ordenspriester</p>
+<p>4.Dezember: Barbara, Märtyrerein in Nikomedien</p>
+<p>6.Dezemeber: Nikolaus, Bischof von Mayra</p>
+<p>7.Dezember: Ambrosius, Bichof von Mailand</p>
+<p>11.Dezember: Damasus I.Papst</p>
+<p>13.Dezember: Lucia, Jungfrau, Märtyrerin in Syrakus</p>
+<p>14.Dezember: Johannes von Kreuz, Ordenspriester</p>
+<p>23.Dezember: Johannes von Krakau, Priester</p>
+<p>25.Dezmeber: Weihnachten (Hochfest)</p>
+<p>26.Dezember: Stephanus</p>
+<p>27.Dezember: Johannes, Apostel und evangelist</p>
+<p>29.Dezember: Thomas Becket, Bichof von Canterbury</p>
+<p>31.Dezember: Silvester, 1Papst</p>
+
+<h2>Datenschutz</h2>
+<p><strong>Datenschutzerklärung</strong></p>
+
+<p><strong>1. Datenschutz auf einen Blick</strong><br>
+Diese Website dient der privaten Darstellung eines Kalenders für katholische Heilige. Die Nutzung meiner Website ist in der Regel ohne Angabe personenbezogener Daten möglich.</p>
+
+<p><strong>2. Hosting und Server-Log-Files</strong><br>
+Beim Aufrufen meiner Website erfasst der Hosting-Anbieter automatisch Informationen in sogenannten Server-Log-Files, die dein Browser automatisch übermittelt. Dies sind: besuchte Seite, Datum und Uhrzeit des Zugriffs, Menge der gesendeten Daten sowie verwendeter Browser und Betriebssystem. Diese Daten werden ausschließlich zur Sicherstellung des Betriebs und zur Verbesserung der Sicherheit ausgewertet.</p>
+
+<p><strong>3. Google Translate</strong><br>
+Diese Website verwendet das Google Translate-Widget für die Mehrsprachigkeit. Dabei können von Google Cookies gesetzt oder Daten an Google-Server übertragen werden. Nähere Informationen findest du in der Datenschutzerklärung von Google unter https://policies.google.com/privacy.</p>
+
+<p><strong>4. Eigene Inhalte und Bilder</strong><br>
+Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder lizenzfrei und unterliegen dem Urheberrecht. Eine Weiterverwendung ohne Zustimmung ist nicht gestattet.</p>
+
+<h2>Impressum</h2>
+<p>E-Mail: michwag42@gmail.com</p>
+<p>Michael Wagner</p>
+<p>Parkstraße 3 84130 Dingolfing</p>
+<!-- Button zum Öffnen der Einstellungen -->
+<button id="settingsToggleBtn" style="font-size: 24px; background: none; border: none; cursor: pointer; padding: 5px;">⚙️</button>
+
+<!-- Das Einstellungs-Menü -->
+<div id="settingsBox" style="display: none; background: rgba(0,0,0,0.05); padding: 15px; border-radius: 10px; margin-top: 10px; max-width: 300px;">
+    <h3>Einstellungen</h3>
+
+    <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'de',
+            includedLanguages: 'de,en,pl,es,fr,it',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+    <!-- Modernster runder Farbwähler für Text -->
+    <div style="margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
+        <label>Textfarbe:</label>
+        <div style="position: relative; width: 35px; height: 35px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
+            <input type="color" id="textColorPicker" value="#000000" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; cursor: pointer;">
+        </div>
+    </div>
+
+    <!-- Modernster runder Farbwähler für Überschriften (H2) -->
+    <div style="margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
+        <label>Überschriften-Farbe:</label>
+        <div style="position: relative; width: 35px; height: 35px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
+            <input type="color" id="h2ColorPicker" value="#000000" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; cursor: pointer;">
+        </div>
+    </div>
+
+    <!-- Modernster runder Farbwähler für Hintergrund -->
+    <div style="margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
+        <label>Hintergrund:</label>
+        <div style="position: relative; width: 35px; height: 35px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
+            <input type="color" id="bgColorPicker" value="#ffffff" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; cursor: pointer;">
+        </div>
+    </div>
+
+    <!-- Schriftgröße -->
+    <div style="margin-bottom: 10px;">
+        <label>Schriftgröße: <span id="fontSizeValue">100%</span></label><br>
+        <input type="range" id="fontSizeSlider" min="80" max="150" value="100" style="width: 100%;">
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
