@@ -36,7 +36,7 @@
     </style>
 </head>
 <body>
-    <header style="background-color: rgba(0,0,0,0.3);padding: 15px; display: flex; algin-items: center; justify-content: space-between;">
+    <header style="background-color: rgba(0,0,0,0.3);padding: 15px; display: flex; align-items: center; justify-content: space-between;">
         <img src="logo.jpeg" style="height: 50px;">
         <h1 data-translate="h" style="margin: 0; color:white;">Katholische Heilige - Heiligenkalender für jeden Monat </h1>
     </header>
@@ -491,29 +491,24 @@ Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder l
 <!-- Button zum Öffnen der Einstellungen -->
 <button id="settingsToggleBtn" style="font-size: 40px; background: none; border: none; cursor: pointer; padding: 20px;">⚙️</button>
 
-<!-- Das Einstellungs-Menü -->
-<div id="settingsBox" style="display: none; background: rgba(0,0,0,0.05); padding: 10px; border-radius: 10px; margin-top: 10px; max-width: 300px;">
+<!-- 1. Das Einstellungsmenü (mit Google Translate und den Farbwählern) -->
+<div id="einstellungsMenue" style="display: none; padding: 20px; background-color: #2a2e33; color: white; margin-bottom: 70px; border-radius: 8px;">
     <h3>Einstellungen</h3>
 
-    <div id="google_translate_element"></div>
+    <div id="google_translate_element" style="margin-bottom: 15px;"></div>
 
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'de',
-            includedLanguages: 'de,en,pl,es,fr,it',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
-    }
-</script>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'de',
+                includedLanguages: 'de,en,pl,es,fr,it',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-
-
-
-
-
-    <!-- Modernster runder Farbwähler für Text -->
+    <!-- Textfarbe -->
     <div style="margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
         <label>Textfarbe:</label>
         <div style="position: relative; width: 35px; height: 35px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
@@ -521,7 +516,7 @@ Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder l
         </div>
     </div>
 
-    <!-- Modernster runder Farbwähler für Überschriften (H2) -->
+    <!-- Überschriften-Farbe -->
     <div style="margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
         <label>Überschriften-Farbe:</label>
         <div style="position: relative; width: 35px; height: 35px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
@@ -529,7 +524,7 @@ Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder l
         </div>
     </div>
 
-    <!-- Modernster runder Farbwähler für Hintergrund -->
+    <!-- Hintergrund -->
     <div style="margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
         <label>Hintergrund:</label>
         <div style="position: relative; width: 35px; height: 35px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
@@ -543,6 +538,54 @@ Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder l
         <input type="range" id="fontSizeSlider" min="80" max="150" value="100" style="width: 100%;">
     </div>
 </div>
+
+<!-- 2. Die feste Fußleiste ganz unten -->
+<div class="untere-leiste">
+    <span class="heiligen-symbol">🕊️</span>
+    <a href="javascript:void(0);" onclick="const m = document.getElementById('einstellungsMenue'); m.style.display = (m.style.display === 'none' ? 'block' : 'none'); if(m.style.display === 'block') m.scrollIntoView({behavior: 'smooth'});" class="einstellungen-btn">⚙️ Einstellungen</a>
+    <span class="heiligen-symbol">🕊️</span>
+</div>
+
+<!-- 3. CSS-Design für die feste Leiste -->
+<style>
+.untere-leiste {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(56, 62, 68, 0.95);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.einstellungen-btn, .heiligen-symbol {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+
+
+
+
+
+
+
+
+    
+
+   
+
+    
+
+    
+
 
 
 <script src="script.js"></script>
