@@ -484,19 +484,19 @@ Diese Website verwendet das Google Translate-Widget für die Mehrsprachigkeit. D
 <p><strong>4. Eigene Inhalte und Bilder</strong><br>
 Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder lizenzfrei und unterliegen dem Urheberrecht. Eine Weiterverwendung ohne Zustimmung ist nicht gestattet.</p>
 <p>Stand: 05.09.2026</p>
-<p>V.1.0.2 13.09.2026 </p>
+<p>V.1.0.3 16.09.2026 </p>
 <h2>Impressum</h2>
 <p>E-Mail: michwag42@gmail.com</p>
 <p>Michael Wagner</p>
 <p>Parkstraße 3 84130 Dingolfing</p>
 <!-- Button zum Öffnen der Einstellungen -->
-<button id="settingsToggleBtn" style="font-size: 40px; background: none; border: none; cursor: pointer; padding: 20px;">⚙️</button>
+<button id="settingsToggleBtn" style="font-size: 0px; background: none; border: none; cursor: pointer; padding: 20px;">⚙️</button>
 
 <!-- 1. Das Einstellungsmenü (mit Google Translate und den Farbwählern) -->
 <div id="einstellungsMenue" style="display: none; padding: 40px; background-color: #2a2e33; color: white; margin-bottom: 70px; border-radius: 8px;">
     <h3>Einstellungen</h3>
 
-    <div id="google_translate_element" style="margin-bottom: 15px;"></div>
+        <div id="google_translate_element" style="margin-bottom: 15px;"></div>
 
     <script type="text/javascript">
         function googleTranslateElementInit() {
@@ -540,35 +540,47 @@ Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder l
     </div>
 </div>
 
-<!-- 2. Die feste Fußleiste ganz unten -->
+<!-- 3. Die feste Fußleiste mit Liquid Glass Effekt -->
 <div class="untere-leiste">
     <span class="heiligen-symbol">🕊️</span>
     <a href="javascript:void(0);" onclick="const m = document.getElementById('einstellungsMenue'); m.style.display = (m.style.display === 'none' ? 'block' : 'none'); if(m.style.display === 'block') m.scrollIntoView({behavior: 'smooth'});" class="einstellungen-btn">⚙️ Einstellungen</a>
     <span class="heiligen-symbol">🕊️</span>
 </div>
 
-<!-- 3. CSS-Design für die feste Leiste -->
+<!-- 4. CSS-Stile inklusive Liquid Glass Design -->
 <style>
 .untere-leiste {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(56, 62, 68, 0.95);
+    bottom: 15px; /* Schwebend über dem Rand */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 600px;
+    
+    /* Hellerer, intensiver Glas-Effekt */
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); /* Für Safari/Apple */
+    
+    /* Edler, heller Glas-Rand und weiche Ecken */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 22px;
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 0;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+    padding: 14px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
 
 .einstellungen-btn, .heiligen-symbol {
     color: white;
-    font-size: 30px;
+    font-size: 18px;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 </style>
 
