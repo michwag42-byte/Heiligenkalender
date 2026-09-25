@@ -53,7 +53,7 @@
 <p>7.Januar: Valentin,  Bischof von Rätien </p>
 <p>8.Januar: Severin, Mönch in Norikum </p>
 <p>13.Januar:Hilarius, Bischof von Poitiers</p>
-<p>17.Januar:Antonius,Möchsvater in Ägypten 
+<p>17.Januar:Antonius,Mönchsvater in Ägypten 
 </p>
 <p>20.Januar:Sebastian;Fabian,Papst 
 </p>
@@ -66,7 +66,7 @@
 <h2>Februar</h2>
 <p>2.Februar: Darstellung des Herrn (Hochfest)</p>
 <p>3.Februar: Blasius</p>
-<p>4.Februa: Rabanus Maurus, Bischof von Mainz</p>
+<p>4.Februar: Rabanus Maurus, Bischof von Mainz</p>
 <p>5.Februar: Agatha, Märtyrerin in Catania</p>
 <p>6.Februar: Paul Miki und Gefährten</p>
 <p>8.Februar: Hieronymus Ämiliani</p>
@@ -74,11 +74,11 @@
 <p>11.Februar: Gedenktag unsere Lieben Frau von Lourdes</p>
 <p>14.Februar:Cyrill</p>
 <p>17.Februar: Sieben Gründer des Servitenordens</p>
-<p>21.Febraur: Petrus Damiani</p>
-<p>22.Febraur: Kathedra Petri</p>
-<p>23.Febraur: Polykarp</p>
-<p>24.Febraur: Matthias, Apostel</p>
-<p>25.Febraur: Walburga, Äbtissin von Heidenheim ind Franken</p>
+<p>21.Februar: Petrus Damiani</p>
+<p>22.Februar: Kathedra Petri</p>
+<p>23.Februar: Polykarp</p>
+<p>24.Februar: Matthias, Apostel</p>
+<p>25.Febraur: Walburga, Äbtissin von Heidenheim in Franken</p>
 <h2>März</h2>
 <p>4.März: Kasimir, Königsohn </p>
 <p>6.März: Fridolin von Säckingen, Mönch und Glaubensbote</p>
@@ -249,7 +249,7 @@
 <p>13.Dezember: Lucia, Jungfrau, Märtyrerin in Syrakus</p>
 <p>14.Dezember: Johannes von Kreuz, Ordenspriester</p>
 <p>23.Dezember: Johannes von Krakau, Priester</p>
-<p>25.Dezmeber: Weihnachten (Hochfest)</p>
+<p>25.Dezember: Weihnachten (Hochfest)</p>
 <p>26.Dezember: Stephanus</p>
 <p>27.Dezember: Johannes, Apostel und evangelist</p>
 <p>29.Dezember: Thomas Becket, Bichof von Canterbury</p>
@@ -257,6 +257,286 @@
 </div>
 
 <h1> Katholischer Heiligenkalender</h1>
+
+<div class="search-container">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Suchen..." onkeydown="if(event.key === 'Enter') executeSearch()" oninput="hideResultsMenu()">
+    <button onclick="executeSearch()">
+      <!-- Lupe als minimalistisches Icon -->
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </button>
+  </div>
+  
+  <!-- Das dynamische Ergebnisse-Menü -->
+  <div id="searchResultsMenu" class="search-results-menu" style="display: none;"></div>
+</div>
+
+
+<!-- ========================================== -->
+<!-- DESIGN (CSS)                               -->
+<!-- ========================================== -->
+<style>
+  :root {
+    --search-bg: rgba(255, 255, 255, 0.08);
+    --search-border: rgba(255, 255, 255, 0.15);
+    --search-text: #ffffff; 
+    --search-focus: #007bff; 
+    --menu-bg: #1e1e24; /* Dunkler Hintergrund für das Menü */
+    --menu-hover: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Falls deine Website einen HELLEN Hintergrund hat, aktiviere diese Zeilen: */
+  /* 
+  :root {
+    --search-bg: rgba(0, 0, 0, 0.05); 
+    --search-border: rgba(0, 0, 0, 0.1);
+    --search-text: #333333;
+    --menu-bg: #ffffff;
+    --menu-hover: rgba(0, 0, 0, 0.05);
+  } 
+  */
+
+  .search-container {
+    margin: 20px 0;
+    position: relative; /* Wichtig für die Positionierung des Menüs */
+    display: inline-block;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    background: var(--search-bg);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--search-border);
+    border-radius: 50px; 
+    padding: 4px 6px 4px 16px;
+    transition: all 0.3s ease;
+    width: 220px; 
+  }
+
+  .search-box:focus-within {
+    width: 300px;
+    border-color: var(--search-focus);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+  }
+
+  .search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--search-text);
+    font-size: 14px;
+    width: 100%;
+    font-family: inherit;
+  }
+
+  .search-box input::placeholder {
+    color: var(--search-text);
+    opacity: 0.6;
+  }
+
+  .search-box button {
+    background: transparent;
+    border: none;
+    color: var(--search-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s ease, transform 0.2s ease;
+    opacity: 0.8;
+  }
+
+  .search-box button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  /* Dropdown-Suchmenü Styling */
+  .search-results-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    min-width: 300px;
+    max-height: 350px;
+    overflow-y: auto;
+    background: var(--menu-bg);
+    border: 1px solid var(--search-border);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 8px 0;
+  }
+
+  .search-result-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid var(--search-border);
+    color: var(--search-text);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .search-result-item:last-child {
+    border-bottom: none;
+  }
+
+  .search-result-item:hover {
+    background: var(--menu-hover);
+  }
+
+  .search-no-results {
+    padding: 12px 16px;
+    color: var(--search-text);
+    opacity: 0.7;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  /* Hervorhebung im Ergebnistext */
+  .search-menu-highlight {
+    background-color: rgba(255, 235, 59, 0.3);
+    color: #ffeb3b;
+    font-weight: bold;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  /* Temporärer Fokus-Effekt auf der Seite bei Klick */
+  .search-target-highlight {
+    animation: highlightFade 2.5s ease-out;
+  }
+
+  @keyframes highlightFade {
+    0% { background-color: #ffeb3b; color: #000; }
+    100% { background-color: transparent; }
+  }
+</style>
+
+
+<!-- ========================================== -->
+<!-- LOGIK (JavaScript)                         -->
+<!-- ========================================== -->
+<script>
+window.executeSearch = function() {
+  const searchInput = document.getElementById("searchInput");
+  const menu = document.getElementById("searchResultsMenu");
+  if (!searchInput || !menu) return;
+
+  const searchTerm = searchInput.value.trim();
+  menu.innerHTML = "";
+
+  if (!searchTerm) {
+    hideResultsMenu();
+    return;
+  }
+
+  const escapedTerm = escapeRegExp(searchTerm);
+  const regex = new RegExp(`(${escapedTerm})`, 'gi');
+  
+  // Textknoten der Seite durchsuchen (Skripte, Menü etc. ignorieren)
+  const walker = document.createTreeWalker(
+    document.body,
+    NodeFilter.SHOW_TEXT,
+    {
+      acceptNode: function(node) {
+        const parent = node.parentNode ? node.parentNode.tagName : '';
+        const parentElem = node.parentElement;
+        
+        // Eigenes Suchmenü und Formularfelder ignorieren
+        if (parentElem && parentElem.closest('.search-container')) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        if (['SCRIPT', 'STYLE', 'INPUT', 'BUTTON', 'TEXTAREA', 'OPTION', 'SELECT'].includes(parent)) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    }
+  );
+
+  const results = [];
+  let currentNode;
+  
+  while (currentNode = walker.nextNode()) {
+    const text = currentNode.nodeValue;
+    if (regex.test(text)) {
+      results.push({
+        node: currentNode,
+        text: text
+      });
+    }
+  }
+
+  // Ergebnisse im Menü anzeigen
+  if (results.length > 0) {
+    results.forEach((item, index) => {
+      const resultElement = document.createElement("div");
+      resultElement.className = "search-result-item";
+      
+      // Kontext des Textes ausschneiden (ca. 30 Zeichen davor/danach)
+      const matchIndex = item.text.search(regex);
+      const start = Math.max(0, matchIndex - 30);
+      const end = Math.min(item.text.length, matchIndex + searchTerm.length + 30);
+      let snippet = item.text.substring(start, end);
+      
+      if (start > 0) snippet = "..." + snippet;
+      if (end < item.text.length) snippet = snippet + "...";
+
+      // Suchbegriff im Snippet hervorheben
+      const highlightedSnippet = snippet.replace(regex, '<span class="search-menu-highlight">$1</span>');
+      resultElement.innerHTML = highlightedSnippet;
+
+      // Klick-Event: Zum Element auf der Seite scrollen
+      resultElement.onclick = function() {
+        const parent = item.node.parentElement;
+        if (parent) {
+          parent.scrollIntoView({ behavior: "smooth", block: "center" });
+          
+          // Kurzer visueller Effekteffekt auf der Seite
+          parent.classList.add("search-target-highlight");
+          setTimeout(() => parent.classList.remove("search-target-highlight"), 2500);
+        }
+        hideResultsMenu();
+      };
+
+      menu.appendChild(resultElement);
+    });
+  } else {
+    const noResult = document.createElement("div");
+    noResult.className = "search-no-results";
+    noResult.textContent = "Keine Treffer gefunden";
+    menu.appendChild(noResult);
+  }
+
+  menu.style.display = "block";
+};
+
+window.hideResultsMenu = function() {
+  const menu = document.getElementById("searchResultsMenu");
+  if (menu) menu.style.display = "none";
+};
+
+// Menü schliessen, wenn ausserhalb geklickt wird
+document.addEventListener("click", function(event) {
+  const container = document.querySelector(".search-container");
+  if (container && !container.contains(event.target)) {
+    hideResultsMenu();
+  }
+});
+
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+</script>
 
 
 
@@ -267,7 +547,7 @@
 <p>7.Januar: Valentin, Bischof von Rätien </p>
 <p>8.Januar: Severin, Mönch in Norikum </p>
 <p>13.Januar:Hilarius, Bischof von Poitiers</p>
-<p>17.Januar:Antonius,Möchsvater in Ägypten 
+<p>17.Januar:Antonius,Mönchsvater in Ägypten 
 </p>
 <p>20.Januar:Sebastian;Fabian,Papst 
 </p>
@@ -280,7 +560,7 @@
 <h2>Februar</h2>
 <p>2.Februar: Darstellung des Herrn (Hochfest)</p>
 <p>3.Februar: Blasius</p>
-<p>4.Februa: Rabanus Maurus, Bischof von Mainz</p>
+<p>4.Februar: Rabanus Maurus, Bischof von Mainz</p>
 <p>5.Februar: Agatha, Märtyrerin in Catania</p>
 <p>6.Februar: Paul Miki und Gefährten</p>
 <p>8.Februar: Hieronymus Ämiliani</p>
@@ -288,11 +568,11 @@
 <p>11.Februar: Gedenktag unsere Lieben Frau von Lourdes</p>
 <p>14.Februar:Cyrill</p>
 <p>17.Februar: Sieben Gründer des Servitenordens</p>
-<p>21.Febraur: Petrus Damiani</p>
-<p>22.Febraur: Kathedra Petri</p>
-<p>23.Febraur: Polykarp</p>
-<p>24.Febraur: Matthias, Apostel</p>
-<p>25.Febraur: Walburga, Äbtissin von Heidenheim ind Franken</p>
+<p>21.Februar: Petrus Damiani</p>
+<p>22.Februar: Kathedra Petri</p>
+<p>23.Februar: Polykarp</p>
+<p>24.Februar: Matthias, Apostel</p>
+<p>25.Febraur: Walburga, Äbtissin von Heidenheim in Franken</p>
 <h2>März</h2>
 <p>4.März: Kasimir, Königsohn </p>
 <p>6.März: Fridolin von Säckingen, Mönch und Glaubensbote</p>
@@ -463,7 +743,7 @@
 <p>13.Dezember: Lucia, Jungfrau, Märtyrerin in Syrakus</p>
 <p>14.Dezember: Johannes von Kreuz, Ordenspriester</p>
 <p>23.Dezember: Johannes von Krakau, Priester</p>
-<p>25.Dezmeber: Weihnachten (Hochfest)</p>
+<p>25.Dezember: Weihnachten (Hochfest)</p>
 <p>26.Dezember: Stephanus</p>
 <p>27.Dezember: Johannes, Apostel und evangelist</p>
 <p>29.Dezember: Thomas Becket, Bichof von Canterbury</p>
@@ -484,7 +764,7 @@ Diese Website verwendet das Google Translate-Widget für die Mehrsprachigkeit. D
 <p><strong>4. Eigene Inhalte und Bilder</strong><br>
 Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder lizenzfrei und unterliegen dem Urheberrecht. Eine Weiterverwendung ohne Zustimmung ist nicht gestattet.</p>
 <p>Stand: 05.09.2026</p>
-<p>V.1.0.3 16.09.2026 </p>
+<p>V.1.0.4 25.09.2026 </p>
 <h2>Impressum</h2>
 <p>E-Mail: michwag42@gmail.com</p>
 <p>Michael Wagner</p>
@@ -493,7 +773,7 @@ Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder l
 <button id="settingsToggleBtn" style="font-size: 0px; background: none; border: none; cursor: pointer; padding: 20px;">⚙️</button>
 
 <!-- 1. Das Einstellungsmenü (mit Google Translate und den Farbwählern) -->
-<div id="einstellungsMenue" style="display: none; padding: 40px; background-color: #2a2e33; color: white; margin-bottom: 70px; border-radius: 30px;">
+<div id="einstellungsMenue" style="display: none; padding: 40px; background-color: #2a2e33; color: white; margin-bottom: 70px; border-radius: 45px;">
     <h3>Einstellungen</h3>
 
         <div id="google_translate_element" style="margin-bottom: 15px;"></div>

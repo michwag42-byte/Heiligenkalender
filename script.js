@@ -82,7 +82,7 @@ function renderApp() {
             } else {
                 const empty = document.createElement('div');
                 empty.className = 'empty-day';
-                empty.textContent = 'Kein Eintrag';
+                empty.textContent = 'noch kein Eintrag';
                 contentDiv.appendChild(empty);
             }
 
