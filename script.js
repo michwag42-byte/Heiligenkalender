@@ -431,5 +431,19 @@ saveBtn.addEventListener('click', async function() {
     console.log("Gespeichert:", { saint: selectedSaint, date: found ? found.date : '', notifications: notificationsActive });
     alert("Deine Einstellungen wurden erfolgreich gespeichert!");
 });
+// sw.js - Der Hintergrund-Dienst für Push-Nachrichten
+self.addEventListener('push', function(event) {
+    const data = event.data ? event.data.json() : {};
+    const title = data.title || "Gedenktag-Erinnerung";
+    const options = {
+        body: data.body || "Heute ist ein wichtiger Gedenktag!",
+        icon: '/icon.png', // Optional: Pfad zu einem Icon
+        badge: '/badge.png'
+    };
+
+    event.waitUntil(
+        self.registration.showNotification(title, options)
+    );
+});
 window.onload = renderApp;
 
