@@ -46,7 +46,66 @@
     <img src="https://media.istockphoto.com/id/463080813/de/foto/das-letzte-abendmahl.jpg?s=612x612&w=0&k=20&c=wufwCG7NjiF2AKCttoik-q0Nfbvh3epxfKuM1Qy2X6g=" width="100%">
   <p>Katholische Heilige von Michael Wagner: Willkommen auf meiner Website über die katholischen Heiligen wählen Sie bei den Kacheln einen Tag aus um den Tagesheiligen dieses tages herauszufinden. Die Einstellungen sowie das Impressum und den Datenschutz finden Sie ganz unten. You will find the settings below </p>  
 <div id="calendarGrid"></div>
+<!-- HEILIGER DES TAGES WIDGET -->
+<div class="saint-display-container">
+    <button class="saint-btn" onclick="changeDay(-1)" title="Vorheriger Tag">&#10094;</button>
+    <div class="saint-info">
+        <span class="saint-date" id="saintDateText">Datum</span>
+        <span class="saint-name" id="saintNameText">Heiliger wird geladen...</span>
+    </div>
+    <button class="saint-btn" onclick="changeDay(1)" title="Nächster Tag">&#10095;</button>
+</div>
 
+<style>
+    .saint-display-container {
+     
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px 40px;
+        border-radius: 30px;
+        backdrop-filter:blur (5px);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: inherit; /* Passt sich an deine bestehende Textfarbe an */
+    }
+
+    .saint-btn {
+        background: white;
+        border: 2px solid currentColor;
+        opacity: 0.8;
+        color: inherit;
+        width: 60px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        transition: all 0.2s ease;
+    }
+
+    .saint-btn:hover {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .saint-info {
+        text-align: center;
+        font-size: 2.0rem;
+    }
+
+    .saint-date {
+        font-size: 2.0rem;
+        opacity: 0.85;
+        display: block;
+    }
+
+    .saint-name {
+        font-weight: 600;
+    }
+</style>
 <!-- ROHDATEN-BEREICH: Hier kannst du deine Heiligen eintragen -->
 <div id="rohdatenListe" style="display: none;">
     <h2>Januar</h2>
@@ -769,7 +828,7 @@ Diese Website verwendet das Google Translate-Widget für die Mehrsprachigkeit. D
 <p><strong>4. Eigene Inhalte und Bilder</strong><br>
 Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder lizenzfrei und unterliegen dem Urheberrecht. Eine Weiterverwendung ohne Zustimmung ist nicht gestattet.</p>
 <p>Stand: 05.09.2026</p>
-<p>V.1.0.5 09.10.2026 </p>
+<p>V.1.0.6 17.10.2026 </p>
 <h2>Impressum</h2>
 <p>E-Mail: michwag42@gmail.com</p>
 <p>Michael Wagner</p>
