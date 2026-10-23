@@ -369,7 +369,7 @@ if (sizeSlider) {
         const options = { day: 'numeric', month: 'long' };
         const dateString = currentDate.toLocaleDateString('de-DE', options);
 
-        const saintName = saintsDB[key] || "Kein Eintrag für diesen Tag";
+        const saintName = saintsDB[key] || "Noch kein Eintrag für diesen Tag";
 
         document.getElementById('saintDateText').textContent = dateString;
         document.getElementById('saintNameText').textContent = saintName;
@@ -380,8 +380,6 @@ if (sizeSlider) {
         updateSaintDisplay();
     }
 
-    // Beim Laden initialisieren
-    updateSaintDisplay();
-
+    
 window.onload = renderApp;
 
