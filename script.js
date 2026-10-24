@@ -379,7 +379,7 @@ if (sizeSlider) {
         currentDate.setDate(currentDate.getDate() + days);
         updateSaintDisplay();
     }
-
+    updateSaintDisplay();
     
 window.onload = renderApp;
 
