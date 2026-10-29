@@ -37,6 +37,9 @@
             padding: 8px 8px;
         
         }
+        label {
+          font-size:25px;
+        }
     </style>
 </head>
 <body>
@@ -835,7 +838,7 @@ Diese Website verwendet das Google Translate-Widget für die Mehrsprachigkeit. D
 <p><strong>4. Eigene Inhalte und Bilder</strong><br>
 Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder lizenzfrei und unterliegen dem Urheberrecht. Eine Weiterverwendung ohne Zustimmung ist nicht gestattet.</p>
 <p>Stand: 05.09.2026</p>
-<p>V.1.0.7 23.10.2026 </p>
+<p>V.1.0.8 29.10.2026 </p>
 <h2>Impressum</h2>
 <p>E-Mail: michwag42@gmail.com</p>
 <p>Michael Wagner</p>
@@ -845,9 +848,9 @@ Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder l
 
 <!-- 1. Das Einstellungsmenü (mit Google Translate und den Farbwählern) -->
 <div id="einstellungsMenue" style="display: none; padding: 40px; background-color: #2a2e33; color: white; margin-bottom: 70px; border-radius: 45px;">
-    <h3>Einstellungen</h3>
+    <h2>Einstellungen</h2>
 
-        <div id="google_translate_element" style="margin-bottom: 15px;"></div>
+        <div id="google_translate_element" style="margin-bottom: 15px;font-size: 50px;"></div>
 
     <script type="text/javascript">
         function googleTranslateElementInit() {
@@ -863,7 +866,7 @@ Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder l
     <!-- Textfarbe -->
     <div style="margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
         <label>Textfarbe:</label>
-        <div style="position: relative; width: 35px; height: 35px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
+        <div style="position: relative; width: 50px; height: 50px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
             <input type="color" id="textColorPicker" value="#000000" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; cursor: pointer;">
         </div>
     </div>
@@ -871,7 +874,7 @@ Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder l
     <!-- Überschriften-Farbe -->
     <div style="margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
         <label>Überschriften-Farbe:</label>
-        <div style="position: relative; width: 35px; height: 35px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
+        <div style="position: relative; width: 50px; height: 50px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
             <input type="color" id="h2ColorPicker" value="#000000" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; cursor: pointer;">
         </div>
     </div>
@@ -879,15 +882,15 @@ Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder l
     <!-- Hintergrund -->
     <div style="margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
         <label>Hintergrund:</label>
-        <div style="position: relative; width: 35px; height: 35px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
+        <div style="position: relative; width: 50px; height: 50px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; cursor: pointer;">
             <input type="color" id="bgColorPicker" value="#ffffff" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; cursor: pointer;">
         </div>
     </div>
 
     <!-- Schriftgröße -->
-    <div style="margin-bottom: 10px;">
+    <div style="margin-bottom: 20px;">
         <label>Schriftgröße: <span id="fontSizeValue">100%</span></label><br>
-        <input type="range" id="fontSizeSlider" min="80" max="150" value="100" style="width: 100%;">
+        <input type="range" id="fontSizeSlider" min="80" max="400" value="200" style="width: 100%;">
     </div>
 </div>
 
