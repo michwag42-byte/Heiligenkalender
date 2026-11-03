@@ -16,17 +16,18 @@
             color:red;
             font-family:zapfino;
             font-size: 50px;
+            text-align: center;
            
         }
         body {
-            background-color:rgb(56, 62, 68)
+            background-color:rgb(229, 224, 216)
         }
         p {
-            color:white;
+            color:black;;
             font-size: 25px;
         }
         titel {
-            color:white;
+            color:black;
         }
         button 
         {
@@ -39,14 +40,30 @@
         }
         label {
           font-size:25px;
+          color: black;
+        }
+        footer {
+       border-top: 4px solid black;
+       display: flex; 
+       flex-direction: column;
+       align-items: center;
+       gap: 10px;
+
+        }
+        small {
+          font-size: 17px;
+          color: black;
+          
         }
     </style>
 </head>
 <body>
-    <header style="background-color: rgba(0,0,0,0.3);padding: 15px; display: flex; align-items: center; justify-content: space-between;">
-        <img src="logo.jpeg" style="height: 120px; width:120px;">
-        <h1 data-translate="h" style="margin: 0; color:white;">Katholische Heilige - Heiligenkalender für jeden Monat </h1>
+    <header style="background-color: rgba(208, 202, 193);padding: 15px;flex-direction: column;">
+        <img src="logo.jpeg" style="display: block; margin: 0 auto; height: 250px; width: 250px; border-radius:300px;">
+        
+        <h1 data-translate="h" style="margin: 0; color:white; font-family: 30px;">Katholische Heilige - Heiligenkalender für jeden Monat </h1>
     </header>
+    
     <img src="https://media.istockphoto.com/id/463080813/de/foto/das-letzte-abendmahl.jpg?s=612x612&w=0&k=20&c=wufwCG7NjiF2AKCttoik-q0Nfbvh3epxfKuM1Qy2X6g=" width="100%">
   <p>Katholische Heilige von Michael Wagner: Willkommen auf meiner Website über die katholischen Heiligen wählen Sie bei den Kacheln einen Tag aus um den Tagesheiligen dieses tages herauszufinden. Die Einstellungen sowie das Impressum und den Datenschutz finden Sie ganz unten. You will find the settings below </p>  
 <div id="calendarGrid"></div>
@@ -66,7 +83,7 @@
         display: inline-flex;
         align-items: center;
         gap: 15px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(208, 202, 193);
         padding: 30px 40px;
         border-radius: 30px;
         backdrop-filter:blur (5px);
@@ -348,7 +365,7 @@
 <!-- ========================================== -->
 <style>
   :root {
-    --search-bg: rgba(255, 255, 255, 0.08);
+    --search-bg: rgba(208, 202, 193);
     --search-border: rgba(255, 255, 255, 0.15);
     --search-text: #ffffff; 
     --search-focus: #007bff; 
@@ -357,7 +374,7 @@
   }
 
   /* Falls deine Website einen HELLEN Hintergrund hat, aktiviere diese Zeilen: */
-  /* 
+  
   :root {
     --search-bg: rgba(0, 0, 0, 0.05); 
     --search-border: rgba(0, 0, 0, 0.1);
@@ -365,7 +382,7 @@
     --menu-bg: #ffffff;
     --menu-hover: rgba(0, 0, 0, 0.05);
   } 
-  */
+  
 
   .search-container {
     margin: 20px 0;
@@ -821,8 +838,8 @@ function escapeRegExp(string) {
 <p>29.Dezember: Thomas Becket, Bichof von Canterbury</p>
 <p>31.Dezember: Silvester, 1Papst</p>
 
-
-
+<p style="text-align:center;">V.1.0.9 | 03.11.2026</p>
+<footer>
 <h2>Datenschutz</h2>
 <p><strong>Datenschutzerklärung</strong></p>
 
@@ -838,16 +855,16 @@ Diese Website verwendet das Google Translate-Widget für die Mehrsprachigkeit. D
 <p><strong>4. Eigene Inhalte und Bilder</strong><br>
 Alle auf dieser Website verwendeten Bilder und Texte sind selbst erstellt oder lizenzfrei und unterliegen dem Urheberrecht. Eine Weiterverwendung ohne Zustimmung ist nicht gestattet.</p>
 <p>Stand: 05.09.2026</p>
-<p>V.1.0.8 29.10.2026 </p>
+
 <h2>Impressum</h2>
 <p>E-Mail: michwag42@gmail.com</p>
 <p>Michael Wagner</p>
 <p>Parkstraße 3 84130 Dingolfing</p>
 <!-- Button zum Öffnen der Einstellungen -->
 <button id="settingsToggleBtn" style="font-size: 0px; background: none; border: none; cursor: pointer; padding: 20px;">⚙️</button>
-
+</footer>
 <!-- 1. Das Einstellungsmenü (mit Google Translate und den Farbwählern) -->
-<div id="einstellungsMenue" style="display: none; padding: 40px; background-color: #2a2e33; color: white; margin-bottom: 70px; border-radius: 45px;">
+<div id="einstellungsMenue" style="display: none; padding: 40px; background-color: rgba(208, 202, 193); color: white; margin-bottom: 70px; border-radius: 45px;">
     <h2>Einstellungen</h2>
 
         <div id="google_translate_element" style="margin-bottom: 15px;font-size: 50px;"></div>
