@@ -352,6 +352,8 @@ if (sizeSlider) {
         "12-04": "Barbara, Märtyrerin in Nikomedien",
         "12-06": "Nikolaus, Bischof von Myra",
         "12-07": "Ambrosius, Bischof von Mailand",
+        "12-08": "Alois Liguda, Priester, Ordensmann, Märtyrer",
+        "12-10": "Angelina, Äbtissin in Kruschedol",
         "12-11": "Damasus I., Papst",
         "12-13": "Lucia, Jungfrau, Märtyrerin in Syrakus",
         "12-14": "Johannes vom Kreuz, Ordenspriester",
